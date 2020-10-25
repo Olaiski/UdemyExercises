@@ -1,0 +1,34 @@
+Concurrency
+    (Refers to an application doing more than one thing at a time)
+
+    https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html
+
+- Process/Application
+- Heap -> Memory space, not shared between two processes
+- Thread -> execution within a process (Every process has at least one thread)
+- Creating a thread doesn't require as many resources as creating a process.
+  Every thread created by a process shares the process's memory and files.
+
+- Each thread has a thread stack, which in the memory only that thread can access.
+- Every process has a heap, and every thread has a thread stack.
+
+- Threads good for:
+    1. Tasks that's going to take a long time (ex. DB Queries)
+    2. API requires us to provide one.
+
+
+- Lambda uses often Runnable (it's flexible)
+
+
+- Synchronized -> Hvis det er en lokal variabel blir lagret i stack'en, hver stack lager en kopi av den. Verdien er lagret på heap'en..
+  Race -> Må dele fra heap'en..
+
+
+- Race/Interference -> Accessing the same resources..
+
+- Synchronize -> Methods and statements..
+    When a method is synchronized only one thread can execute that at a time, all other methods or sync methods in that class
+    will suspend until the thread running the methods exits it.
+    (Ex. a method has 3 Sync. methods, only one can run at a time and on one thread)
+
+
