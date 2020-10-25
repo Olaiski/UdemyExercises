@@ -1,0 +1,19 @@
+
+-- Concurrency -> Application doing more than one thing at a time.
+    (Progress can be made on more than one task)
+
+- Every java application runs as a single process, each process can have multiple threads.
+  (Every process has a heap, and every thread has a thread stack)
+
+- A Thread is a unit of execution within a process. Each process can have multiple threads.
+
+- Creating a thread doesn't require as many resources as creating a process. Every thread
+  created by a process shares the process's memory and files.
+
+- Each thread has a thread stack, which is the memory that only that thread can access.
+
+- Multithreading good for tasks that takes a long time to complete.
+    (Ex. DB query, fetching data from the internet)
+
+- Instead of a single thread -> create another thread and execute the long-running task on that thread.
+
